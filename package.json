@@ -1,0 +1,25 @@
+{
+  "name": "alphakey",
+  "version": "1.0.0",
+  "description": "Test string until you find a match.",
+  "main": "./lib/alphaKey.js",
+  "scripts": {
+    "test": "echo Infinity"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kepempem/alphaKey.git"
+  },
+  "keywords": [
+    "test",
+    "string",
+    "key",
+    "alpha"
+  ],
+  "author": "Shani Shlapobersky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kepempem/alphaKey/issues"
+  },
+  "homepage": "https://github.com/kepempem/alphaKey#readme"
+}

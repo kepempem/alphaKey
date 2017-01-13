@@ -1,0 +1,16 @@
+{
+  "name": "alphakey",
+  "description": "Test string until you find a match.",
+  "main": "./lib/alphaKey.js",
+  "authors": [
+    "Shani Shlapobersky"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "test",
+    "string",
+    "key",
+    "alpha"
+  ],
+  "homepage": "https://github.com/kepempem/alphaKey"
+}
