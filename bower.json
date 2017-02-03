@@ -1,11 +1,11 @@
 {
   "name": "alphakey",
-  "description": "Test string until you find a match.",
+  "description": "Test strings until you find a match.",
   "main": "./lib/alphaKey.js",
   "authors": [
     "Shani Shlapobersky"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "test",
     "string",

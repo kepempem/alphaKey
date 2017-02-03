@@ -1,7 +1,7 @@
 {
   "name": "alphakey",
-  "version": "1.0.0",
-  "description": "Test string until you find a match.",
+  "version": "1.0.0-beta.1",
+  "description": "Test strings until you find a match.",
   "main": "./lib/alphaKey.js",
   "scripts": {
     "test": "echo Infinity"
@@ -12,12 +12,14 @@
   },
   "keywords": [
     "test",
+    "tests",
     "string",
     "key",
-    "alpha"
+    "alpha",
+    "beta"
   ],
   "author": "Shani Shlapobersky",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kepempem/alphaKey/issues"
   },

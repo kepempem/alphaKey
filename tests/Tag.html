@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AlphaKey Tags test</title>
+    <script src="../lib/AlphaKey.js"></script>
+    <script src="../lib/AlphaKey.html.js"></script>
+    <script>
+      function __TEST__(guess){
+        if(guess=="jes"){
+          return "Jessica";
+        }
+        return "JESSICA";
+      }
+      var _interval = setInterval(function(){
+        var AK_EL=document.createElement("AlphaKey");
+        AK_EL.setAttribute("fn","__TEST__");
+        AK_EL.setAttribute("target","Jessica");
+        document.body.appendChild(AK_EL);
+      },100);
+      setTimeout(function(){
+        clearInterval(_interval);
+      },10000);
+    </script>
+  </head>
+  <body>
+    <AlphaKey fn="__TEST__" target="Jessica" optionss="{}"></AlphaKey>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AlphaKey test #1</title>
+    <script src="../lib/AlphaKey.js"></script>
+    <script>
+      function my_debug_function(result,guess,index){
+        var my_paragraph = document.createElement("p");
+        my_paragraph.innerHTML="<b>"+index+"</b>:&nbsp;<i>"+guess.replace(/ /g,"&nbsp;")+"</i>";
+        document.body.appendChild(my_paragraph);
+      }
+      var test_number = 100;
+      var myAlphaKey = AlphaKey({
+        testing_max_value:test_number,
+        debug_function:my_debug_function
+      });
+    </script>
+  </head>
+  <body>
+    <script>
+      myAlphaKey.testAgainst(function(guess){if(guess==myAlphaKey.test(test_number)){return myAlphaKey.test(test_number);}},myAlphaKey.test(test_number));
+    </script>
+  </body>
+</html>
