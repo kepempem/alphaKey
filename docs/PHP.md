@@ -21,3 +21,15 @@ $myAlphaKey = new AlphaKey(Array(
   "TESTING_ZERO_INDEX_MAX_VALUE" => 100 // Read ZeroIndexExplanation.md for further information.
   ));
 ```
+2. Use the ``testAgainst`` function to find a match like this (This example is used to decrypt SHA1 hashes):
+```
+$result = $myAlphaKey->testAgainst(create_function('$guess','return sha1($guess);'),$hash);
+```
+3. Check whether the ``testAgainst`` function found a match:
+```
+if ($result!==INF){
+  // A match was found
+} else {
+  // No match was found
+}
+```

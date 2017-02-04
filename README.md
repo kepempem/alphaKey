@@ -12,10 +12,11 @@ AlphaKey allows you to go through every string which contains a specified set of
 | PHP | V | | |
 | Java | V | | |
 + [documentation](./docs/README.md)
-  + [Testing Zero Index Max Value explanation](./docs/ZeroIndexExplanation.md)
   + [JS](./docs/JS.md)
   + [Python](./docs/Python.md)
   + [PHP](./docs/PHP.md)
   + [Java](./docs/Java.md)
+  + [HTML](./docs/HTML.md)
+  + [Testing Zero Index Max Value explanation](./docs/ZeroIndexExplanation.md)
 
 ### AlphaKey is licensed under the MIT license.

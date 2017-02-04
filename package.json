@@ -1,6 +1,6 @@
 {
   "name": "alphakey",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Test strings until you find a match.",
   "main": "./lib/alphaKey.js",
   "scripts": {
