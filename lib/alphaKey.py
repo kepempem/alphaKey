@@ -1,11 +1,11 @@
 import struct,sys
 from urllib.request import urlopen
 defaults = {
-    'key':' abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.@_-,',
+    'key':' abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     'TESTING_LENGTH':1,
     'TESTING_MAX_VALUE':int(sys.float_info.max),
     'debug_function':lambda result,guess,index:0,
-    'TESTING_ZERO_INDEX_MAX_VALUE':100
+    'TESTING_ZERO_INDEX_MAX_VALUE':3
 }
 def CI_HasAttr(obj,p):
     for attr in obj:

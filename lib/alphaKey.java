@@ -1,14 +1,14 @@
 /**
 	* An AlphaKey object constructor.
 	* @author Shani Shlapobersky
-	* @see {alphaKey}
-	* @return {alphaKey} an alphaKey object.
+	* @see {AlphaKey}
+	* @return {AlphaKey} an alphaKey object.
 */
 public class AlphaKey{
-    private String mKey = " abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.@_-,";
+    private String mKey = " abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private int mTestingLength = 1;
     private long mTestingMaxValue = Long.MAX_VALUE;
-    private int mTestingZeroIndexMaxValue = 100;
+    private int mTestingZeroIndexMaxValue = 3;
     private DebugTester mDebug = new DebugTester() {
         @Override
         public void Debug(String result, String guess, int index) {

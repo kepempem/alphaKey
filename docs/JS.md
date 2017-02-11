@@ -22,7 +22,7 @@ var myAlphaKey = AlphaKey({
 
     debug_function: function(result,guess,index){}, // This function will be called every time a test is preformed within the testAgainst function. When called, it will receive three arguments, the result, the guess and the index.
 
-    TESTING_ZERO_INDEX_MAX_VALUE: 100 // Read ZeroIndexExplanation.md for further information.
+    TESTING_ZERO_INDEX_MAX_VALUE: 3 // Read ZeroIndexExplanation.md for further information.
   })
 ```
 2. Test for a match (assuming you have a ```SHA1``` function that takes a single string argument):
@@ -37,4 +37,31 @@ if (typeof(result)=='string'){
 } else {
   // No match was found
 }
+```
+### Setters
+In order to change the AlphaKey object's options after it was configured, use the following setter methods:
+
+Set the ``key``:
+```
+myAlphaKey.setKey(String key);
+```
+
+Set the ``TESTING_LENGTH``:
+```
+myAlphaKey.setTestingLength(int testingLength);
+```
+
+Set the ``TESTING_MAX_VALUE``:
+```
+myAlphaKey.setTestingMaxValue(long testingMaxValue);
+```
+
+Set the ``debug_function``:
+```
+myAlphaKey.setDebugFunction(Function debugFunction);
+```
+
+Set the ``TESTING_ZERO_INDEX_MAX_VALUE``:
+```
+myAlphaKey.setTestingZeroIndexMaxValue(int testingZeroIndexMaxValue);
 ```

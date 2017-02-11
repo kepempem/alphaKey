@@ -1,7 +1,7 @@
 {
   "name": "alphakey",
-  "version": "1.0.0-beta.3",
-  "description": "Test strings until you find a match.",
+  "version": "1.0.0-beta.4",
+  "description": "Decrypt the results of complex encryption algorithms using a guessing algorithm 🔐",
   "main": "./lib/alphaKey.js",
   "scripts": {
     "test": "echo Infinity"

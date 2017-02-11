@@ -1,17 +1,17 @@
 <?php
 	/**
 		* @author Shani Shlapobersky
-		* @see {alphaKey}
-		* @return {alphaKey} an alphaKey object.
+		* @see {AlphaKey}
+		* @return {AlphaKey} an AlphaKey object.
 		* @param options an {Object} of settings.
 		* @license MIT
 	*/
 	class AlphaKey{
 		private $defaults = array(
-			"key" => ' abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.@_-,',
+			"key" => ' abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 			"TESTING_LENGTH" => 1,
 			"TESTING_MAX_VALUE" => PHP_INT_MAX,
-			"TESTING_ZERO_INDEX_MAX_VALUE" => 100
+			"TESTING_ZERO_INDEX_MAX_VALUE" => 3
 		);
 		private static function CI_HasAttr($obj,$property){
 			if (array_key_exists($property,$obj)){return true;}
@@ -34,7 +34,7 @@
 			}
 			return false;
 		}
-		private function test($index){
+		public function test($index){
 			$index = abs($index);
 			$r = $index%strlen($this->options[$this->CI_GetAttrName($this->options,'key')]);
 			if ($index-$r==0){
@@ -62,6 +62,42 @@
 				}
 			}
 			return INF;
+		}
+		public function setKey($key=$this->defaults["key"]){
+			$key = (string) $key;
+			if (strlen($key)>0){
+				$this->options[$this->CI_GetAttrName($this->options,"key")] = $key;
+			} else {
+				$this->options[$this->CI_GetAttrName($this->options,"key")] = $this->defaults['key'];
+			}
+		}
+		public function setTestingLength($testingLength=$this->defaults["TESTING_LENGTH"]){
+			$testingLength = abs((int) $testingLength);
+			$maxTestingLength = strlen($this->test($this->options[$this->CI_GetAttrName($this->options,"TESTING_MAX_VALUE")]));
+			if ($testingLength>$maxTestingLength){
+				$testingLength = $maxTestingLength;
+			} elseif ($testingLength<1) {
+				$testingLength = 1;
+			}
+			$this->options[$this->CI_GetAttrName($this->options,"TESTING_LENGTH")] = $testingLength;
+		}
+		public function setTestingMaxValue($testingMaxValue=$this->defaults["TESTING_MAX_VALUE"]){
+			$testingMaxValue = abs((int) $testingMaxValue);
+			if ($testingMaxValue>PHP_INT_MAX){
+				$testingMaxValue = PHP_INT_MAX;
+			} elseif ($testingMaxValue<1){
+				$testingMaxValue = 1;
+			}
+			$this->options[$this->CI_GetAttrName($this->options,"TESTING_MAX_VALUE")] = $testingMaxValue;
+		}
+		public function setTestingZeroIndexMaxValue($testingZeroIndexMaxValue=$this->defaults["TESTING_ZERO_INDEX_MAX_VALUE"]){
+			$testingZeroIndexMaxValue = abs((int) $testingZeroIndexMaxValue);
+			if ($testingZeroIndexMaxValue>PHP_INT_MAX){
+				$testingZeroIndexMaxValue = PHP_INT_MAX;
+			} elseif ($testingZeroIndexMaxValue<1){
+				$testingZeroIndexMaxValue = 1;
+			}
+			$this->options[$this->CI_GetAttrName($this->options,"TESTING_ZERO_INDEX_MAX_VALUE")] = $testingZeroIndexMaxValue;
 		}
 		function __construct($options=Array()){
 			$this->options=$options;

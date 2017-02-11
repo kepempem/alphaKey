@@ -1,6 +1,6 @@
 {
   "name": "alphakey",
-  "description": "Test strings until you find a match.",
+  "description": "Decrypt the results of complex encryption algorithms using a guessing algorithm 🔐",
   "main": "./lib/alphaKey.js",
   "authors": [
     "Shani Shlapobersky"
