@@ -1,8 +1,8 @@
 {
   "name": "alphakey",
-  "version": "1.0.0-beta.5",
-  "description": "Decrypt the results of complex encryption algorithms using a guessing algorithm 🔐",
-  "main": "./lib/alphaKey.js",
+  "version": "1.0.0-beta.6",
+  "description": "Brute-forcing made easy 🔐",
+  "main": "./src/AlphaKey.js",
   "scripts": {
     "test": "echo Infinity"
   },

@@ -11,11 +11,13 @@ function AlphaKey(options={}){
 	if (!(this instanceof AlphaKey)){return new AlphaKey(options);}
 	this.defaults={
 		key:" abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+		debug_function:function(result,guess,index){},
 		TESTING_LENGTH:1,
 		TESTING_MAX_VALUE:Number.MAX_VALUE,
-		debug_function:function(result,guess,index){},
-		TESTING_ZERO_INDEX_MAX_VALUE:3
+		TESTING_ZERO_INDEX_MAX_VALUE:3,
+		MULTI_MATCHES: false
 	};
+	this.defaults.TESTING_MAX_LENGTH = this.test(this.defaults.TESTING_MAX_VALUE).length+1;
 	var properties = (function(defaults){var ar=[];for(var key in defaults){ar.push(key);}return ar;})(this.defaults);
 	this.options=options;
 	for(var p in this.options){
